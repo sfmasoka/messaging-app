@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+}
+
+/* Login Container */
+.login-container {
+  width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #1877f2;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 14px;
+  background: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-container button:hover {
+  background: #166fe5;
+}
+
+/* Chat Container */
+.chat-container {
+  display: flex;
+  height: 100vh;
+  background: #ffffff;
+}
+
+/* Contacts Panel */
+.contacts-panel {
+  width: 300px;
+  border-right: 1px solid #e4e6eb;
+  background: #f8f9fa;
+}
+
+.panel-header {
+  padding: 20px;
+  font-weight: 600;
+  color: #050505;
+  border-bottom: 1px solid #e4e6eb;
+}
+
+.contacts-list {
+  height: calc(100vh - 61px);
+  overflow-y: auto;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact:hover {
+  background: #e4e6e9;
+}
+
+.contact.active {
+  background: #1877f2;
+  color: white;
+}
+
+.online-status {
+  width: 10px;
+  height: 10px;
+  background: #31a24c;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Chat Area */
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 20px;
+  border-bottom: 1px solid #e4e6eb;
+  font-weight: 600;
+  color: #050505;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+
+.message {
+  max-width: 70%;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.message.sent {
+  background: #1877f2;
+  color: white;
+  margin-left: auto;
+}
+
+.message-time {
+  font-size: 12px;
+  color: #65676b;
+  margin-top: 4px;
+}
+
+/* Input Area */
+.input-area {
+  padding: 20px;
+  border-top: 1px solid #e4e6eb;
+  display: flex;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #e4e6eb;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.input-area button {
+  padding: 14px 24px;
+  background: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-area button:hover {
+  background: #166fe5;
+}
+
+.new-group {
+  color: #1877f2;
+  font-weight: 500;
+}
+
+/*******************8**/
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/***************************/
+.contact.group {
+  color: #1877f2;
+  font-weight: 500;
+}
+
+.group-icon {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.contact.group:hover {
+  background: #e7f3ff;
+}

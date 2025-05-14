@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Internet Messenger</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Login Screen -->
+    <div class="login-container" id="loginContainer">
+      <h2>Secure Messenger</h2>
+      <input type="text" id="usernameInput" placeholder="Enter your username" />
+      <button onclick="login()">Connect</button>
+    </div>
+
+    <!-- Main Chat Interface -->
+    <div class="chat-container" id="chatContainer" style="display: none">
+      <!-- Contacts Panel -->
+      <div class="contacts-panel">
+        <div class="panel-header">Contacts</div>
+        <div class="contacts-list" id="contactsList">
+          <div class="contact new-group" onclick="showGroupCreator()">
+            <div class="online-status"></div>
+            Create New Group
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Area -->
+      <div class="chat-area">
+        <div class="chat-header" id="chatHeader">
+          Select a contact to start chatting
+        </div>
+
+        <!-- Messages Container -->
+        <div class="messages" id="messagesContainer"></div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Type your message..."
+            onkeypress="handleKeyPress(event)"
+          />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
